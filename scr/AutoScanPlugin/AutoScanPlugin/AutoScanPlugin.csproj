@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D7221C6-4D92-4D5B-B339-D5B720413DC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoScanPlugin</RootNamespace>
+    <AssemblyName>AutoScanPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MobileWarehouseOnline.Configuration">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Configuration.Interfaces">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Configuration.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Configuration.Types">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Configuration.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Core">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Core.Interfaces, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Core.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Core.Types, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Core.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Documents">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Documents.Interfaces, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Documents.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Documents.Processes">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Documents.Processes.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Documents.Types, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Documents.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Erp">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Erp.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Erp.Interfaces">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Erp.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Erp.Types, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Erp.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Frame">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Frame.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Frame.Interfaces, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Frame.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Frame.Interfaces.Api, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Frame.Interfaces.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Frame.Plugins, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Frame.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Frame.Types, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Frame.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Presentation">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Presentation.Interfaces, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Presentation.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Presentation.Models">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Presentation.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Presentation.Types">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Presentation.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Presentation.WinForms">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Presentation.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Processes">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Processes.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Processes.Interfaces, Version=2020.1.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Processes.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Processes.Tasks">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Processes.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Processes.Types">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Processes.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Resources">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Shipping">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Shipping.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Shipping.Interfaces">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Shipping.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Stocktaking">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Stocktaking.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Stocktaking.Interfaces">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Stocktaking.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileWarehouseOnline.Stocktaking.Types">
+      <HintPath>..\..\..\..\..\Users\PR\Downloads\Warehouseman\MobileWarehouseOnline.Stocktaking.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoScan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
