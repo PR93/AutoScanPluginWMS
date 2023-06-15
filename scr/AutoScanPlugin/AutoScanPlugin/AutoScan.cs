@@ -10,9 +10,6 @@ using MobileWarehouseOnline.Presentation.Interfaces.Controls.Editors;
 using System.Net.Sockets;
 using System.IO;
 
-//  Author: Paweł Rokicki (ENSOFT)
-//  Create date: 03.01.2022 
-
 namespace AutoScanPlugin
 {
     [Plugin(typeof(IProcessForm), "AutoScanPlugin", Description = "AutoScanPlugin")]
