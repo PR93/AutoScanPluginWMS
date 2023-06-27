@@ -120,11 +120,5 @@ namespace AutoScanPlugin
                 return "Error (-2)";
             }
         }
-
-        public string Cut(string test)
-        {
-            string test1 = test.Remove(test.Length - 1);
-            return test1.Remove(0, 1);
-        }
     }
 }
