@@ -67,55 +67,51 @@ namespace AutoScanPlugin
 									END
 									ELSE
 									BEGIN
-										select 'Error (-5)'
+										select 'Error (-4)'
 									END
 								END
 								ELSE
 								BEGIN
-									select 'Error (-4)'
+									select 'Error (-3)'
 								END", System.Data.CommandType.Text);
 
-                if(ip != "Error (-3)")
-                { 
+ 		    if(!ip.Contains("Error"))
+			return ip;
 
-                    TcpClient tcpclnt = new TcpClient();
-                    tcpclnt.Connect(ip, 2112);
-                    Stream stm = tcpclnt.GetStream();
-
-                    ASCIIEncoding asen = new ASCIIEncoding();
-                    byte[] message = new byte[] { 0x02, 0x32, 0x31, 0x03 };
-
-                    stm.Write(message, 0, message.Length);
-
-                    byte[] bb = new byte[100];
-                    int k = stm.Read(bb, 0, 100);
-
-                    string reading = "";
-
-                    for (int i = 0; i < k; i++)
-                    {
-                        reading = reading + Convert.ToChar(bb[i]).ToString();
-                    }
-
-                    tcpclnt.Close();
-
-                    if(reading != "")
-                    {
-                        return Cut(reading);
-                    }
-                    else
-                    {
-                        return "Error (-1)";
-                    }
-                }
-                else
-                {
-                    return "Error (-2)";
-                }
+		    TcpClient tcpclnt = new TcpClient();
+		    tcpclnt.Connect(ip, 2112);
+		    Stream stm = tcpclnt.GetStream();
+	
+		    ASCIIEncoding asen = new ASCIIEncoding();
+		    byte[] message = new byte[] { 0x02, 0x32, 0x31, 0x03 };
+	
+		    stm.Write(message, 0, message.Length);
+	
+		    byte[] bb = new byte[100];
+		    int k = stm.Read(bb, 0, 100);
+	
+		    string reading = "";
+	
+		    for (int i = 0; i < k; i++)
+		    {
+			reading = reading + Convert.ToChar(bb[i]).ToString();
+		    }
+	
+		    tcpclnt.Close();
+	
+		    if(reading != "")
+		    {
+			return Cut(reading);
+		    }
+		    else
+		    {
+			return "Error (-1)";
+		    }
+      
             }
             catch
             {
-                return "Error (-3)";
+                return "Error (-2)";
             }
         }
     }
