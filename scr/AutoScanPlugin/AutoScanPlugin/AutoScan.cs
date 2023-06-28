@@ -59,23 +59,21 @@ namespace AutoScanPlugin
             try
             {
 
-                var ip = Api.SqlManager.ExecuteScalar<string>($@"IF (EXISTS (SELECT *  FROM INFORMATION_SCHEMA.TABLES 
-                                                                                 WHERE TABLE_SCHEMA = 'cdn' 
-                                                                                 AND  TABLE_NAME = 'WMSPluginSettings'))
-                                                                BEGIN
-                                                                    if(EXISTS (select Value from cdn.WMSPluginSettings where Name='IP'))
-	                                                                BEGIN
-		                                                                select Value from cdn.WMSPluginSettings where Name='IP'
-	                                                                END
-	                                                                ELSE
-	                                                                BEGIN
-		                                                                select 'Error (-5)'
-	                                                                END
-                                                                END
-                                                                ELSE
-                                                                BEGIN
-	                                                                select 'Error (-4)'
-                                                                END", System.Data.CommandType.Text);
+                var ip = Api.SqlManager.ExecuteScalar<string>($@"IF (EXISTS (SELECT *  FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cdn' AND  TABLE_NAME = 'WMSPluginSettings'))
+								BEGIN
+								    if(EXISTS (select Value from cdn.WMSPluginSettings where Name='IP'))
+									BEGIN
+										select Value from cdn.WMSPluginSettings where Name='IP'
+									END
+									ELSE
+									BEGIN
+										select 'Error (-5)'
+									END
+								END
+								ELSE
+								BEGIN
+									select 'Error (-4)'
+								END", System.Data.CommandType.Text);
 
                 if(ip != "Error (-3)")
                 { 
