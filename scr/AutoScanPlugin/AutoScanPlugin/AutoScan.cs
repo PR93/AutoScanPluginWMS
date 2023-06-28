@@ -69,12 +69,12 @@ namespace AutoScanPlugin
 	                                                                END
 	                                                                ELSE
 	                                                                BEGIN
-		                                                                select 'Error (-3)'
+		                                                                select 'Error (-5)'
 	                                                                END
                                                                 END
                                                                 ELSE
                                                                 BEGIN
-	                                                                select 'Error (-3)'
+	                                                                select 'Error (-4)'
                                                                 END", System.Data.CommandType.Text);
 
                 if(ip != "Error (-3)")
@@ -112,12 +112,12 @@ namespace AutoScanPlugin
                 }
                 else
                 {
-                    return "Error (-3)";
+                    return "Error (-2)";
                 }
             }
             catch
             {
-                return "Error (-2)";
+                return "Error (-3)";
             }
         }
     }
