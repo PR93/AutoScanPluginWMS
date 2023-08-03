@@ -8,7 +8,7 @@ using MobileWarehouseOnline.Processes.Interfaces.Presentation;
 using System.Windows.Forms;
 using MobileWarehouseOnline.Presentation.Interfaces.Controls.Editors;
 using System.Net.Sockets;
-using System.IO;
+using System.IO; 
 
 namespace AutoScanPlugin
 {
